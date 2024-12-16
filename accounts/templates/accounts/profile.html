@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Your Profile{% endblock %}
+{% block content %}
+    <h1>Your Profile</h1>
+    <div>Hi, {{ request.user.username }}</div>
+{% endblock %}
