@@ -4,7 +4,7 @@
     <h1>Log in to your account</h1>
     <div>
         <div class="login-form">
-            <form action="{% url 'accounts:login' %}" method="post">
+            <form action="{% url 'login' %}" method="post">
                 {{ form.as_p }}
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}" />

@@ -4,9 +4,9 @@
     <h1>Hi, {{ request.user.username }}</h1>
     <p>This is your dashboard</p>
     <p>
-        <a href="{% url 'accounts:profile' %}">View Profile</a>
+        <a href="{% url 'profile' %}">View Profile</a>
     </p>
-    <form action="{% url "accounts:logout" %}" method="post">
+    <form action="{% url "logout" %}" method="post">
         <button type="submit">Log out</button>
         {% csrf_token %}
     </form>
