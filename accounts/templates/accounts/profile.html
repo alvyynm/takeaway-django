@@ -6,7 +6,7 @@
         <li>Username: {{ request.user.username }}</li>
         <li>Email: {{ request.user.email }}</li>
         <li>Date joined: {{ request.user.date_joined }}</li>
-        <li>Last Login: {{ request.user.last_login }}</li>
+        <li>Last Updated: {{ last_updated|date:"F j, Y, g:i a" }}</li>
     </ul>
     <a href="{% url 'dashboard' %}">Dashboard</a>
 </p>
