@@ -8,10 +8,9 @@
         <li>Date joined: {{ request.user.date_joined }}</li>
         <li>Last Login: {{ request.user.last_login }}</li>
     </ul>
-    <p>
-        <a href="{% url 'accounts:dashboard' %}">Dashboard</a>
-    </p>
-    <p>
-        <a href="{% url 'accounts:logout' %}">Logout</a>
-    </p>
+    <a href="{% url 'accounts:dashboard' %}">Dashboard</a>
+</p>
+<p>
+    <a href="{% url 'accounts:logout' %}">Logout</a>
+</p>
 {% endblock %}
