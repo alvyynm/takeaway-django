@@ -1,3 +1,6 @@
-from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+from simple_history import register
+
+# register the default User model for history tracking
+register(User)
