@@ -30,7 +30,7 @@ def signup_view(request):
 
         if form.is_valid():
             form.save()
-            return redirect('accounts:login')
+            return redirect('login')
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
