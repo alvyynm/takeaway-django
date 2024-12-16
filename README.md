@@ -30,7 +30,7 @@
    ```bash
    python manage.py migrate
    ```
-7. Create a superuser:
+7. Create a superuser (optional -- only if you want to access the admin site):
    ```bash
    python manage.py createsuperuser
    ```
