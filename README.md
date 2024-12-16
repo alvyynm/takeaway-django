@@ -9,6 +9,8 @@ There's also a separate dashboard app whose sole responsibility is to display th
 
 To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django.
 
+For linting, flake8 is used (for Python code) and djlint for linting django templates. I've also setup a precommit hook to ensure linting rules are respected before a commit is accepted.
+
 ## How to run the project
 1. Clone the project:
    ```bash
