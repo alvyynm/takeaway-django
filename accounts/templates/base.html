@@ -10,8 +10,8 @@
     </head>
     <body>
         <header>
-            <nav>
-                <a href="/">App logo</a>
+            <nav class="navbar">
+                <a href="{% url 'dashboard' %}">App logo</a>
                 <ul>
                     {% if request.user.is_authenticated %}
                         <li>
