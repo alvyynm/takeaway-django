@@ -17,12 +17,6 @@ def profile_view(request):
     return render(request, 'accounts/profile.html', context)
 
 
-@login_required
-def dashboard_view(request):
-    """Dashboard view for the authenticated user"""
-    return render(request, 'accounts/dashboard.html')
-
-
 def signup_view(request):
     """User registration view"""
     if request.method == 'POST':
