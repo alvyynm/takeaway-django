@@ -1,5 +1,14 @@
 # takeaway-django
 
+## Implementation Details
+To implement this project, I first decided to create a separate accounts app which handles the different logic and views for login, signup, password reset and password change.
+
+The accounts app is also responsible for displaying the user profile page as the profile is more tied to the user model.
+
+There's also a separate dashboard app whose sole responsibility is to display the dashboard. I took this approach so that the dashboard app can have a clean url (in this case you can access the dashboard at `/` instead of being coupled with the accounts app which has an `accounts/` prefix across all views).
+
+To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django.
+
 ## How to run the project
 1. Clone the project:
    ```bash

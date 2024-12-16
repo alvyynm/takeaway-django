@@ -17,12 +17,6 @@ def profile_view(request):
     return render(request, 'accounts/profile.html', context)
 
 
-@login_required
-def dashboard_view(request):
-    """Dashboard view for the authenticated user"""
-    return render(request, 'accounts/dashboard.html')
-
-
 def signup_view(request):
     """User registration view"""
     if request.method == 'POST':
@@ -30,7 +24,7 @@ def signup_view(request):
 
         if form.is_valid():
             form.save()
-            return redirect('accounts:login')
+            return redirect('login')
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
