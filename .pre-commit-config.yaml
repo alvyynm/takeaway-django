@@ -10,4 +10,4 @@ repos:
     hooks:
       - id: flake8
         exclude: migrations,settings.py
-        args: [--max-line-length=120, --ignore=E501, F401]
+        args: ["--max-line-length=120", "--ignore=E501, F401"]
