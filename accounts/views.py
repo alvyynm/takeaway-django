@@ -8,7 +8,13 @@ from .forms import CustomUserCreationForm
 @login_required
 def profile_view(request):
     """Profile view for the authenticated user"""
-    return render(request, 'accounts/profile.html')
+    user_history = request.user.history.all().order_by('-history_date')
+
+    context = {
+        'user': request.user,
+        'last_updated': user_history.first().history_date if user_history.exists() else None
+    }
+    return render(request, 'accounts/profile.html', context)
 
 
 @login_required
