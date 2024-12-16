@@ -3,4 +3,10 @@
 {% block content %}
     <h1>Your Profile</h1>
     <div>Hi, {{ request.user.username }}</div>
+    <p>
+        <a href="{% url 'accounts:dashboard' %}">Dashboard</a>
+    </p>
+    <p>
+        <a href="{% url 'accounts:logout' %}">Logout</a>
+    </p>
 {% endblock %}
