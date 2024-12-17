@@ -14,6 +14,8 @@ To track the user's last updated data, I use [django-simple-history](https://dja
 ### NOTE:
 In order to send a password reset email, make sure your ISP is not blocking port 587. If password reset emails are blocked (if you see a `TimeoutError: timed out` error), you can hotspot your device using your phone/tablet and test the feature again.
 
+For linting, flake8 is used (for Python code) and djlint for linting django templates. I've also setup a precommit hook to ensure linting rules are respected before a commit is accepted.
+
 ## How to run the project
 1. Clone the project:
    ```bash
