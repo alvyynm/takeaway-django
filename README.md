@@ -9,6 +9,9 @@ There's also a separate dashboard app whose sole responsibility is to display th
 
 To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django.
 
+### NOTE:
+In order to send a password reset email, make sure your ISP is not blocking port 587. If password reset emails are blocked (if you see a `TimeoutError: timed out` error), you can hotspot your device using your phone/tablet and test the feature again.
+
 ## How to run the project
 1. Clone the project:
    ```bash
