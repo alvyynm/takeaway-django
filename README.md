@@ -1,13 +1,13 @@
 # takeaway-django
 
 ## Implementation Details
-To implement this project, I first decided to create a separate accounts app which handles the different logic and views for login, signup, password reset and password change.
+To implement this project, I first decided to create a separate accounts app which handles the different logic and views for login, signup, password reset and password change. This way the authentication logic is separate from the app  for easier maintenance.
 
 The accounts app is also responsible for displaying the user profile page as the profile is more tied to the user model.
 
-There's also a separate dashboard app whose sole responsibility is to display the dashboard. I took this approach so that the dashboard app can have a clean url (in this case you can access the dashboard at `/` instead of being coupled with the accounts app which has an `accounts/` prefix across all views).
+There's also a separate dashboard app whose sole responsibility is to display the dashboard. I took this approach so that the dashboard app can have a clean url (in this case you can access the dashboard at `/` instead of being coupled with the accounts app which has an `accounts/` prefix across all views). This also ensures that if the'res lots of other features needed for the dashboard, it's easier to extend and maintain.
 
-To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django.
+To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django. It allows tracking of all the changes made to the `User` model in an easy way. For instance, when a user updates their password, the package records when that change was made.
 
 ### NOTE:
 In order to send a password reset email, make sure your ISP is not blocking port 587. If password reset emails are blocked (if you see a `TimeoutError: timed out` error), you can hotspot your device using your phone/tablet and test the feature again.
