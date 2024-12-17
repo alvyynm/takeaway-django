@@ -5,6 +5,8 @@ To implement this project, I first decided to create a separate accounts app whi
 
 The accounts app is also responsible for displaying the user profile page as the profile is more tied to the user model.
 
+To implement, authentication and related functionality, the built-in Django authentication framework with the built-in User model is used for its simplicity.
+
 There's also a separate dashboard app whose sole responsibility is to display the dashboard. I took this approach so that the dashboard app can have a clean url (in this case you can access the dashboard at `/` instead of being coupled with the accounts app which has an `accounts/` prefix across all views). This also ensures that if the'res lots of other features needed for the dashboard, it's easier to extend and maintain.
 
 To track the user's last updated data, I use [django-simple-history](https://django-simple-history.readthedocs.io/en/latest/quick_start.html#configure), a third-party package that enables you to track changes to any model instance in django. It allows tracking of all the changes made to the `User` model in an easy way. For instance, when a user updates their password, the package records when that change was made.
